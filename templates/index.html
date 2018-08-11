@@ -1,0 +1,19 @@
+<html>
+    <head>
+    <title>  Kaniyam Ebook Uploader   </title>
+    </head>
+   <body>
+    <h1> Kaniyam Ebook Uploader </h1> 
+      <form action="{{ url_for('convert_ebook') }}" method = "POST" 
+         enctype = "multipart/form-data">
+         ODT-File <input type = "file" name = "odtfile" /> <br> 
+            <br>
+         YAML File <input type = "file" name = "yamlfile" /> <br> 
+            <br>      
+   JPG File  <input type = "file" name = "jpgfile" /> <br> 
+            <br>
+         <input type = "submit"/>
+      </form>
+      
+   </body>
+</html>
