@@ -53,4 +53,7 @@ def convert_ebook():
 #SampleTesting.testing(ODTFILE='a',CONFIGYAML='b',COVERJPG='c')
 
 if __name__ == '__main__':
-   app.run(debug = True)
+    if not os.path.exists(app.config['UPLOAD_FOLDER']):
+        os.mkdir(app.config['UPLOAD_FOLDER'])
+        print("Creating Directory")
+    app.run(debug = True)
